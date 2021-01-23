@@ -1,4 +1,4 @@
-const name = document.qeuerySelector(".name-js");
+const name = document.querySelector(".name-js");
 const LS_NAME = "UserName";
 
 function paintName(name) {
