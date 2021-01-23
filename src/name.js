@@ -2,7 +2,10 @@ const name = document.querySelector(".name-js");
 const LS_NAME = "UserName";
 
 function paintName(name) {
-  name.innerText = `Hello! ${name} Have a good Day !`;
+  //name.innerText = `Hello! ${name} Have a good Day !`;
+  const span = document.createElement("span");
+  span.innerHTML = `Hello! ${name} Have a good Day !`;
+  name.appendChild(span);
 }
 
 function handleSubmit(event) {
