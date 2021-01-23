@@ -3,6 +3,7 @@ const LS_NAME = "UserName";
 
 function paintName(name) {
   //name.innerText = `Hello! ${name} Have a good Day !`;
+  name.innerHTML = "";
   const span = document.createElement("span");
   span.innerHTML = `Hello! ${name} Have a good Day !`;
   name.appendChild(span);
