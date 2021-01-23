@@ -1,14 +1,14 @@
 const name = document.querySelector(".name-js");
 const LS_NAME = "UserName";
 
-function paintName(name) {
+function paintName(text) {
   //name.innerText = `Hello! ${name} Have a good Day !`;
   const input = name.querySelector("input");
   if(input !== null) {
     name.removeChild(input);
   }
   const h4 = document.createElement("h4");
-  h4.innerText = `Hello! ${name} Have a good Day !`;
+  h4.innerText = `Hello! ${text} Have a good Day !`;
   name.appendChild(h4);
 }
 
