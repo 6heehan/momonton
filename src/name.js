@@ -3,10 +3,13 @@ const LS_NAME = "UserName";
 
 function paintName(name) {
   //name.innerText = `Hello! ${name} Have a good Day !`;
-  name.innerHTML = "";
-  const span = document.createElement("span");
-  span.innerHTML = `Hello! ${name} Have a good Day !`;
-  name.appendChild(span);
+  const input = name.querySelector("input");
+  if(input !== null) {
+    name.removeChild(input);
+  }
+  const h4 = document.createElement("h4");
+  h4.innerText = `Hello! ${name} Have a good Day !`;
+  name.appendChild(h4);
 }
 
 function handleSubmit(event) {
