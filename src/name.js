@@ -10,7 +10,7 @@ function handleSubmit(event) {
   //console.log(event.target);
   const input = event.target.querySelector("input");
   const nameValue = input.value;
-  localStorage.setItem("LS_NAME",nameValue);
+  localStorage.setItem(LS_NAME,nameValue);
   paintName(nameValue);
 }
 
@@ -25,7 +25,7 @@ function askName() {
 }
 
 function init() {
-  const loadName = localStorage.getItem("LS_NAME");
+  const loadName = localStorage.getItem(LS_NAME);
   if(loadName === null) {
     askName();
   } else {
