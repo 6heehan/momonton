@@ -4,7 +4,7 @@ const weather = document.querySelector(".weather-js");
 
 function getWeather(lat, lon) {
   fetch(
-    `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
   )
     .then(function (response) {
       const json = response.json();
