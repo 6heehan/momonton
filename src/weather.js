@@ -7,9 +7,7 @@ function getWeather(lat, lon) {
     `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
   )
     .then(function (response) {
-      return response.json();
-    })
-    .then(function (json) {
+      const json = response.json();
       const temp = json.main.temp;
       const place = json.name;
       weather.innterText = `${temp} @ ${place}`;
